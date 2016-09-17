@@ -30,27 +30,19 @@
 			<a href="{%url 'home:home'%}" class="brand-logo">TotalServiceGeeks</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{%url 'home:home'%}">Inicio</a></li>
-<<<<<<< HEAD
-				<li><a href="#">Acerca</a></li>
-				<li><a href="{% url 'login'%}">Iniciar Sesión</a></li>
-				<li><a href="{% url 'registro' %}">Registrate</a></li>
-				<li><a href="{%url 'tienda:tienda'%}">Tienda</a></li>
-				<li><a href="{%url 'cart:cart_detail'%}">
-=======
 				{%if request.user.is_authenticated%}
 					<li><a href="#">Perfil</a></li>
 					<li><a href="{% url 'accounts:registro'%}">Cerrar Sesión</a></li>
+					<li><a href="{% url 'tienda:tienda'%}">Tienda</a></li>
+					<li><a href="{% url 'cart:cart_detail'%}">
+					{%with total_items=cart|length%}<img src="/media/tienda/carrito.png {{producto.imegen}}" height="20">
+					{{total_items}} {%if total_items > 0%}
+			 		{{total_items|pluralize}}
+			  		{%else%} {{tota_items}} {%endif%}{%endwith%}</a></li>
 				{%else%}
 				<li><a href="#">Iniciar Sesión</a></li>
 				<li><a href="{% url 'accounts:registro'%}">Registrate</a></li>
 				{%endif%}
-				<li><a href="{% url 'tienda:tienda'%}">Tienda</a></li>
-				<li><a href="{% url 'cart:cart_detail'%}">
->>>>>>> ivan
-				{%with total_items=cart|length%}<img src="/media/tienda/carrito.png {{producto.imegen}}" height="20">
-				{{total_items}} {%if total_items > 0%}
-			 	{{total_items|pluralize}}
-			  {%else%} {{tota_items}} {%endif%}{%endwith%}</a></li>
 			</ul>
 		</div>
 	</nav>	
