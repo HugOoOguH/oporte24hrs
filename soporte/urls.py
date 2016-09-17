@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^',include(UrlsMain,namespace="home")),
     url(r'^tienda/', include(tiendaUrls, namespace="tienda")),
     url(r'^cart/', include(cartUrls, namespace="cart")),
-    url(r'^accounts/', include(accUrls)),
+    url(r'^accounts/', include(accUrls,namespace="accounts")),
     url(
             regex=r'^media/(?P<path>.*)$',
             view=serve,

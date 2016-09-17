@@ -134,7 +134,8 @@ AUTHENTICATION_BACKENDS = (
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
-SESSION_EXPIRE_AT_BROWSER_CLOSE = FalseTATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = FalseSTATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 CART_SESSION_ID = 'cart'

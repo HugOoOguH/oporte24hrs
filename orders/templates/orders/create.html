@@ -17,7 +17,7 @@
     <p>
         Total: $ {{cart.get_precio_total}}
     </p>
-    <form action="." method="post" class="formulario_orden">
+    <form action="." method="post" class="formulario_orden" class="formulario_orden">
         {%csrf_token%} {{form.as_p}}
         <input type="submit" value="Pagar">
     </form>
