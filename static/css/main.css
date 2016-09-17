@@ -5,18 +5,13 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-image: url(st.jpg);
+    background-color: #b0bec5;
 }
 
 h1, h2, h3, h4, h5, th, td, ul, p {
     color: #FFFFFF;
 }
-.main {
-    flex: 1 0 auto;
-  }
+
 .formulario_orden {
     padding: 5%;
     padding-top: 1%;
@@ -24,17 +19,19 @@ h1, h2, h3, h4, h5, th, td, ul, p {
 .form_users{
     padding: 5%;
     padding-top: 1%;
-    padding-bottom: 1%;   
+    padding-bottom: 1%; 
+    background-color:black ;  
 }
 
 #wrapper {
     margin: 0px auto 0px auto;
     width: 1000px;
     min-height: 100%;
-    *height: 100%;
+    *height: auto;
     _height: 100%;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.5;
+    padding-bottom: 5%;
 }
 
 .tabla {

@@ -14,12 +14,12 @@
         <table>
             <thead>
                 <tr>
-                    <th>Imagen</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Quitar</th>
-                    <th>Precio Unitario</th>
-                    <th>SubTotal</th>
+                    <th>|  Imagen  |</th>
+                    <th>|  Producto  |</th>
+                    <th>|  Cantidad  |</th>
+                    <th>|  Quitar  |</th>
+                    <th>|  Precio Unitario  |</th>
+                    <th>|  SubTotal  |</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,12 +52,21 @@
                 </tr>
             </tbody>
         </table>
-        <form action="{%url 'tienda:tienda'%}">
-            <input type="submit" value="Seguir Comprando">
-        </form>
-        <form action="{%url 'orders:create'%}">
-                <input type="submit" value="Pagar">
-        </form>
+
+
+        <button class="waves-effect waves-light btn  light-blue" >
+            <a href="{%url 'tienda:tienda'%}" class="white-text">
+            Continuar comprando
+            </a>
+        </button>
+
+
+         <button class="waves-effect waves-light btn  light-blue" >
+            <a href="{%url 'orders:create'%}" class="white-text">
+            Pagar
+            </a>
+        </button>
+
     </div>
 </body>
 

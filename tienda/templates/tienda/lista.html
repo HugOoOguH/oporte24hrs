@@ -11,7 +11,7 @@
 		</a>
 		<form action="{%url 'tienda:detalle' producto.id%}">
 			{%csrf_token%} {{form.as_p}}
-			<input type="submit" value="Detalle Producto"></input>
+			<input type="submit" value="Detalle Producto" class="waves-effect waves-light btn  light-blue"></input>
 		</form>
 	</div>
 	{%empty%}

@@ -1,4 +1,8 @@
-{% extends 'base.html'%}{%block titulo%}{{producto.nombre}}{%endblock titulo%}{% block content%}
+{% extends 'base.html'%}
+{%block titulo%}
+{{producto.nombre}}
+{%endblock titulo%}
+{% block content%}
 <div id="wrapper">
 	<br></br>
 	<div class="product-images"><a><img src="/media/{{producto.imagen}}" height="175"></a></div>
@@ -6,7 +10,7 @@
 	<h4> $ {{producto.precio}}</h4>
 	<form action="{%url 'cart:cart_add' producto.id%}" method="post">
 		{%csrf_token%}{{form.as_p}}
-		<input type="submit" value="Agregar al Carrito"></input>
+		<input type="submit" value="Agregar al Carrito" class="waves-effect waves-light btn  light-blue"></input>
 	</form>
 </div>
 {% endblock content%}
