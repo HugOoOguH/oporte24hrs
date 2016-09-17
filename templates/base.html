@@ -31,8 +31,8 @@
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{%url 'home:home'%}">Inicio</a></li>
 				<li><a href="#">Acerca</a></li>
-				<li><a href="#">Iniciar Sesión</a></li>
-				<li><a href="#">Registrate</a></li>
+				<li><a href="{% url 'login'%}">Iniciar Sesión</a></li>
+				<li><a href="{% url 'registro' %}">Registrate</a></li>
 				<li><a href="{%url 'tienda:tienda'%}">Tienda</a></li>
 				<li><a href="{%url 'cart:cart_detail'%}">
 				{%with total_items=cart|length%}<img src="/media/tienda/carrito.png {{producto.imegen}}" height="20">
